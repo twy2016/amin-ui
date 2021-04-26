@@ -17,3 +17,16 @@ Mock.mock('/captcha', 'get', () => {
 Mock.mock('/login', 'post', () => {
     return Result
 })
+
+Mock.mock('/logout', 'post', () => {
+    return Result
+})
+
+Mock.mock('/sys/userInfo', 'get', () => {
+    Result.data = {
+        id: "1",
+        username: "唐万言",
+        avatar: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg"
+    }
+    return Result
+})
