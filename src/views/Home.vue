@@ -22,6 +22,7 @@
         </div>
       </el-header>
       <el-main>
+        <Tabs></Tabs>
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -30,11 +31,13 @@
 
 <script>
 import SideMenu from "@/views/inc/SideMenu";
+import Tabs from "@/views/inc/Tabs";
 
 export default {
   name: "Home",
   components: {
-    SideMenu
+    SideMenu,
+    Tabs
   },
   data() {
     return {
@@ -58,7 +61,7 @@ export default {
       this.$axios.post("/logout").then(res => {
         localStorage.clear()
         sessionStorage.clear()
-        this.$store.commit("")
+        this.$store.commit("resetState")
         this.$router.push("/login")
       })
     }
@@ -103,6 +106,7 @@ export default {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
+  padding: 0;
   /*line-height: 160px;*/
 }
 

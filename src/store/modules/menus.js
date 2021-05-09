@@ -9,7 +9,12 @@ export default {
         menuList: [],
         // 权限数据
         permList: [],
-        hasRoutes: false
+        hasRoutes: false,
+        editableTabsValue: 'Index',
+        editableTabs: [{
+            title: '首页',
+            name: 'Index',
+        }]
     },
     mutations: {
         changeRouteStatus(state, hasRoute) {
@@ -21,6 +26,27 @@ export default {
         },
         setPermList(state, authoritys) {
             state.permList = authoritys
+        },
+        addTab(state, tab) {
+            let index = state.editableTabs.findIndex(e => e.title === tab.title)
+            if (index === -1) {
+                state.editableTabs.push({
+                    title: tab.title,
+                    name: tab.name
+                });
+            }
+            state.editableTabsValue = tab.name;
+        },
+        resetState: (state) => {
+            state.token = '',
+            state.menuList = [],
+            state.permList = [],
+            state.hasRoutes = false,
+            state.editableTabsValue = 'Index',
+            state.editableTabs = [{
+                title: '首页',
+                name: 'Index',
+            }]
         }
     },
     actions: {},
