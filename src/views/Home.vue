@@ -74,42 +74,33 @@ export default {
   padding: 0;
   margin: 0;
   height: 100%;
+  text-decoration: none;
 }
-
 .header-avatar {
   float: right;
+  width: 210px;
   display: flex;
-  width: 130px;
   justify-content: space-around;
   align-items: center;
 }
-
 .el-dropdown-link {
   cursor: pointer;
 }
-
 .el-header {
-  background-color: #B3C0D1;
+  background-color: #17B3A3;
   color: #333;
   text-align: center;
   line-height: 60px;
 }
-
 .el-aside {
   background-color: #D3DCE6;
   color: #333;
-  text-align: center;
   line-height: 200px;
 }
-
 .el-main {
-  background-color: #E9EEF3;
   color: #333;
-  text-align: center;
   padding: 0;
-  /*line-height: 160px;*/
 }
-
 a {
   text-decoration: none;
 }

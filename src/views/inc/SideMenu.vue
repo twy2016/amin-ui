@@ -1,7 +1,7 @@
 <template>
   <el-menu
       :default-active="this.$store.state.menus.editableTabsValue"
-      class="el-menu-vertical"
+      class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b">
@@ -47,5 +47,8 @@ export default {
 
 .el-menu-vertical {
   height: 100%;
+}
+a {
+  text-decoration: none;
 }
 </style>
